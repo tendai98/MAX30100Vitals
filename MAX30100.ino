@@ -10,6 +10,7 @@ void setup() {
 void loop() {
   sensorUpdate();
   if(validateData()){
+    // Sending data to computer via serial in CSV format (for parsing) 
     Serial.printf("%.2f,%.2f\n", GLOBAL_BPM, GLOBAL_SPO2);
   }
   delay(100);
